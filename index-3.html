@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Second Tour – Le rappel qui fait revenir vos clients</title>
+<meta name="description" content="Vos clients ont aimé. Ils ont juste oublié de revenir. Second Tour leur envoie le bon message, au bon moment, avec une offre à usage unique. 15 €/mois, sans engagement.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Vos clients ont aimé. Ils ont juste oublié de revenir.">
+<meta property="og:description" content="Second Tour envoie le bon rappel au bon moment, avec une offre à usage unique. 15 €/mois, sans engagement, satisfait ou remboursé 30 jours.">
+<meta property="og:url" content="https://second-tour-umber.vercel.app/">
+<meta property="og:image" content="https://second-tour-umber.vercel.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16264C">
+<style>
+:root{--ink:#16264C;--butter:#F6C945;--paper:#FBFAF6;--text:#141B2D;--slate:#4A5468;--line:#DAD8CF}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);background:var(--paper);line-height:1.6;font-size:1.0625rem;padding-bottom:96px}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+h1,h2,h3{letter-spacing:-.03em;line-height:1.08;margin:0}
+h1{font-size:clamp(2.2rem,9.5vw,3.6rem);font-weight:850}
+h2{font-size:clamp(1.65rem,6.5vw,2.2rem);font-weight:800}
+p{margin:0 0 1em}
+a{color:inherit}
+.btn{display:block;width:100%;text-align:center;background:var(--butter);color:var(--ink);font-weight:800;font-size:1.125rem;padding:17px 20px;border-radius:10px;text-decoration:none;min-height:56px}
+.btn:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--butter);outline-offset:3px}
+.hero{background:var(--ink);color:var(--paper);padding:22px 0 64px}
+.brand{font-weight:850;letter-spacing:-.02em;font-size:1.1rem}
+.hero h1{margin:44px 0 18px}
+.lead{font-size:1.15rem;color:#D3D9E8;margin-bottom:28px}
+.note{font-size:.9rem;margin:12px 0 0;text-align:center;color:#B9C2D8}
+.ticket{background:#fff;color:var(--text);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.5;padding:22px 22px 24px;margin:48px auto 10px;max-width:330px;transform:rotate(-1.4deg);box-shadow:0 14px 0 -6px rgba(0,0,0,.18)}
+.ticket .c{text-align:center}
+.ticket .row{display:flex;justify-content:space-between}
+.ticket hr{border:0;border-top:2px dashed #b9b6ab;margin:12px 0}
+.ticket .offer{background:var(--butter);color:var(--ink);font-weight:800;padding:10px;text-align:center;margin:12px 0 8px;line-height:1.35}
+.cap{font-size:.85rem;color:#B9C2D8;text-align:center;margin-top:18px}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+section h2{margin-bottom:18px}
+.calc{background:#fff;border:2px solid var(--ink);padding:20px;border-radius:4px}
+.calc strong{font-size:1.25rem;display:block;margin-bottom:6px}
+.small{font-size:.875rem;color:var(--slate)}
+.benefits{list-style:none;margin:0;padding:0}
+.benefits li{padding:18px 0;border-top:1px solid var(--line)}
+.benefits li:first-child{border-top:0;padding-top:0}
+.benefits b{display:block;font-size:1.2rem;letter-spacing:-.02em;margin-bottom:2px}
+.price{background:var(--ink);color:var(--paper);border:0}
+.price h2{margin-bottom:6px}
+.amount{font-size:3.6rem;font-weight:850;letter-spacing:-.04em;line-height:1}
+.amount span{font-size:1.3rem;font-weight:700;letter-spacing:0}
+.perday{color:#D3D9E8;margin:6px 0 22px}
+.guar{border:2px solid var(--butter);border-radius:6px;padding:16px;margin-bottom:22px}
+.guar b{display:block;font-size:1.15rem;margin-bottom:4px}
+.price .btn{margin-bottom:0}
+details{border-top:1px solid var(--line);padding:16px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{font-weight:700;cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;color:var(--slate)}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;color:var(--slate)}
+footer{padding:36px 0 24px;font-size:.9rem;color:var(--slate)}
+footer a{margin-right:16px;display:inline-block;padding:6px 0}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px));z-index:5}
+.bar .btn{max-width:600px;margin:0 auto}
+@media (min-width:700px){body{padding-bottom:0}.bar{display:none}.btn{width:auto;display:inline-block;padding:17px 36px}.note{text-align:left}.price .btn{display:block;width:100%}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">Second Tour</div>
+    <h1>Vos clients ont aimé. Ils ont juste oublié de revenir.</h1>
+    <p class="lead">Second Tour envoie à chacun de vos clients le bon message, au bon moment, avec une offre à usage unique. Vous n’avez aucun fichier à tenir et personne à relancer.</p>
+    <a class="btn" href="https://buy.stripe.com/5kQ3cx7RD2LLaCD4XFcjS01">Commencer pour 15 €/mois</a>
+    <p class="note">Sans engagement. Satisfait ou remboursé pendant 30 jours.</p>
+
+    <div class="ticket" role="img" aria-label="Exemple d’offre de retour au format ticket de caisse">
+      <div class="c"><b>LE BISTROT DU COIN</b></div>
+      <div class="c">Mardi, 12 h 41</div>
+      <hr>
+      <div class="row"><span>Menu du jour</span><span>14,50</span></div>
+      <div class="row"><span>Café</span><span>2,00</span></div>
+      <hr>
+      <div class="row"><b>TOTAL</b><b>16,50</b></div>
+      <hr>
+      <div class="c">Merci de votre visite !</div>
+      <div class="offer">Revenez vite : −10 % sur votre prochaine addition</div>
+      <div class="c">Offre valable une seule fois</div>
+    </div>
+    <p class="cap">Exemple d’offre envoyée à un client.</p>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Un client qui ne revient pas, ça coûte plus qu’on ne le croit.</h2>
+      <p>Il n’est pas déçu. Il a simplement oublié, et personne ne le relance.</p>
+      <div class="calc">
+        <strong>10 clients de plus par mois, avec un panier de 20 €, ce sont 200 € en plus.</strong>
+        Soit plus de 13 fois le prix de Second Tour.
+        <p class="small" style="margin:10px 0 0">Exemple chiffré, à adapter à votre commerce.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Ce que vous gagnez</h2>
+      <ul class="benefits">
+        <li><b>Aucun fichier à tenir</b>Vos clients laissent leur email en quelques secondes, au comptoir ou au moment de payer.</li>
+        <li><b>Le rappel part pour vous</b>Chaque client reçoit son message au bon moment après sa visite, avec une offre simple qu’il ne peut utiliser qu’une fois.</li>
+        <li><b>Vous voyez ce que ça rapporte</b>Un compteur vous indique combien de clients sont revenus et combien ils ont dépensé.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="price" id="tarif">
+    <div class="wrap">
+      <h2>Une seule formule</h2>
+      <div class="amount">15 €<span> par mois</span></div>
+      <p class="perday">Soit 0,50 € par jour.</p>
+      <div class="guar">
+        <b>Satisfait ou remboursé pendant 30 jours</b>
+        Si Second Tour ne vous convient pas, écrivez-nous à secondtour.rappel@gmail.com. Nous vous remboursons sous 5 jours ouvrés.
+      </div>
+      <a class="btn" href="https://buy.stripe.com/5kQ3cx7RD2LLaCD4XFcjS01">Commencer pour 15 €/mois</a>
+      <p class="note">Sans engagement, résiliable à tout moment.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Vos questions</h2>
+      <details>
+        <summary>Est-ce que ça marche pour mon commerce ?</summary>
+        <p>Oui, si vos clients ont une raison de revenir : restaurant, café, boulangerie, traiteur. Le rappel est envoyé après un délai adapté à votre activité.</p>
+      </details>
+      <details>
+        <summary>Combien de temps ça me prend ?</summary>
+        <p>Une dizaine de minutes pour démarrer. Ensuite, vous n’avez plus rien à faire : le rappel part sans vous.</p>
+      </details>
+      <details>
+        <summary>Et si je veux arrêter ?</summary>
+        <p>Vous arrêtez quand vous voulez, sans préavis, en nous écrivant un email. Pendant les 30 premiers jours, vous pouvez en plus être remboursé.</p>
+      </details>
+      <details>
+        <summary>À quoi sert exactement ce que je paie ?</summary>
+        <p>À l’envoi des rappels à vos clients, à l’offre à usage unique et au compteur qui vous montre combien de clients sont revenus et combien ils ont dépensé.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="/mentions-legales.html">Mentions légales</a><a href="/cgv.html">Conditions générales de vente</a><a href="/confidentialite.html">Confidentialité</a>
+    <p style="margin-top:12px">Contact : <a href="mailto:secondtour.rappel@gmail.com">secondtour.rappel@gmail.com</a></p>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn" href="https://buy.stripe.com/5kQ3cx7RD2LLaCD4XFcjS01">Commencer pour 15 €/mois</a></div>
+
+</body>
+</html>
